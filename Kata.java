@@ -41,6 +41,7 @@ else{return false;}
 }
 
 
+
 public static boolean isOdd(int number){
 return number%2!=0;
 }
@@ -139,30 +140,16 @@ for(int counter = 1; counter <= num;counter++){
 
 }
 
+}
 return sum % 2 != 0;
 
 }
 
-public static int factorial(int number){
-
-int factorial = 1;
-for(int count = 1; count <= number; count++){
-
-	factorial *= count;
 
 
 
 
-
-}
-
-return factorial;
-
-}
-
-
-
-public static int isPalindrum(int num){
+/*public static int isPalindrum(int num){
 boolean real = true;
 int digit = 0;
 int reverse = 0;
@@ -182,8 +169,54 @@ if(check == reverse){real = true;}
 else{real = false;}
 
 
-return real;
+//return real;
 }
+*/
+
+
+
+
+
+public static int factor(int number){
+int factorial = 1;
+for(int count = 1; count <= number; count++){
+
+	factorial *= count;
+
+
+
+
+
+}
+
+return factorial;
+
+}
+
+
+
+public static int findSmallest(int[] num){
+
+int min = num[0];
+
+for(int count = 1; count < num.length; count++){
+//min[count] = num[4];
+if(num[count] < min)
+min = num[count];
+//if(num < min){min = num;}
+
+
+}
+
+return min;
+}
+
+
+
+
+
+
+
 
 
 
