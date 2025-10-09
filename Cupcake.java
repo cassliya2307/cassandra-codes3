@@ -38,14 +38,14 @@ return average;
 public static int countOccurence(int[] num1, int num2){
 
 int target = num2;
-int count = 0;
-for(count = 0; count < num1.length; count++){
-if(num2 == num1[count]){count += 1;}
-
+int sum = 0;
+for(int count = 0; count < num1.length; count++){
+if(num2 == num1[count])
+sum += 1;
 
 }
 
-return count;
+return sum;
 
 
 
@@ -55,39 +55,21 @@ return count;
 
 
 public static int getFirstElement(int [] integer){
-int store = 0;
-int firstNumber = integer[0]; 
-for(int count = 1; count < integer.length; count++){
-if(integer.length == 0){
+int firstNumber = integer[0];
 
-integer[0] = 0;
-store = integer[0];
-}
 
-else{store = firstNumber;}
 
-}
-
-return store;
+return firstNumber;
 
 }
 
 
 public static int getLastElement(int [] number){
-
+int lastNumber = 0;
 for(int count = 1; count < number.length; count++){
-int store = 0;
-int lastNumber = number[0];
-if(number.length == 0){
-
-number[0] = 0;
-lastNumber = number[0];
+lastNumber = number[number.length - 1];
 }
 
-else{lastNumber = number[0];}
-
-
-}
 
 return lastNumber;
 
@@ -107,14 +89,77 @@ return sum;
 }
 
 
-public static middleElement(int [] number){
+public static int middleElement(int [] number){
 
-for(int count = 0; count < number.lenght; count++){
-if(count % 2 == 0)
+int midNumber = 0;
+for(int count = 0; count < number.length; count++){
+	
+midNumber = number[(number.length - 1) / 2];
+
+}
+
+return midNumber;
 
 
 
 }
+
+
+public static boolean containsElement(int [] number1, int number2){
+
+int target = number2;
+boolean contain = true;
+for(int count = 0; count < number1.length; count++){
+
+if(number2 == number1[count]){
+contain = true;}
+
+else{contain = false;}
+}
+
+return contain;
+
+}
+
+
+
+
+public static int swapFirstAndLastNumber(int[] number){
+
+int firstNumber = number[0];
+int temp = 0;
+int lastNumber = 0;
+for(int count = 1; count < number.length; count++){
+lastNumber = number[number.length - 1];
+
+temp = firstNumber;
+firstNumber = lastNumber;
+lastNumber = temp;
+
+}
+
+
+
+return number[lastNumber];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

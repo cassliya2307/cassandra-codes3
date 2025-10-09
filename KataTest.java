@@ -30,8 +30,14 @@ int [] number = {1,2,3,4,6,7,9};
 System.out.println(Cupcake.arrayLength(number));
 
 
+int [] num2 = {1,2,3,4,6,7,9};
+System.out.println(Cupcake.getLastElement(num2));
 
+int [] integer = {1,2,3,5,6,3,3,3};
+System.out.println(Cupcake.containsElement(integer , 3 ));
 
+int [] number3 = {1,2,3,5,6,3,3,3};
+System.out.println(Cupcake.swapFirstAndLastNumber(number3));
 
 
 }
